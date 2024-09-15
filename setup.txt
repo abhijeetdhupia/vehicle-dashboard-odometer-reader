@@ -1,0 +1,28 @@
+Environment Setup Guide
+
+Requirements:
+- Conda
+- CUDA version 11.1 (Adjust torch version for different CUDA versions)
+
+Setup Instructions:
+
+1. Create a Conda Environment:
+   conda create --name odometer-reader python=3.8 -y
+
+2. Activate the Environment:
+   conda activate odometer-reader
+
+3. Install PaddleOCR:
+   pip install paddleocr
+
+4. Install PaddlePaddle:
+   - For systems with a GPU: pip install paddlepaddle-gpu
+   - If you do not have a GPU: pip install paddlepaddle
+
+5. Install PyTorch and TorchVision (CUDA 11.1):
+   pip install torch==1.8.0+cu111 torchvision==0.9.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
+
+Note: For different CUDA versions, check the PyTorch website for compatible versions.
+
+Additional Note:
+- When running test_predict.py, if there are any missing dependencies, the script will attempt to install them automatically.
